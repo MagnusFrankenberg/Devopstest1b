@@ -20,4 +20,10 @@ public class HelloController {
     public String greeting3(@RequestParam(name="name", defaultValue= "Guest") String name){
         return "Hello "+name+"!!!";
     }
+
+    @GetMapping("greeting4")
+    public String greeting4(@RequestParam("name") String name,
+                            @RequestParam("lastname") String lastname){
+        return "Hello "+name+" "+lastname+"!!";
+    }
 }
